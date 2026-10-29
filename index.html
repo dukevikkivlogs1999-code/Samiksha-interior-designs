@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>Samiksha Interior Designs | Bespoke Turnkey Home Interiors in Bengaluru</title>
+  <meta name="description" content="Bespoke residential and turnkey interior solutions tailored to your lifestyle across Bengaluru & Karnataka. Located at Muthanallur Cross, Dommasandra."/>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    /* Smooth card transitions for filter */
+    .portfolio-item {
+      transition: all 0.35s ease;
+    }
+    .portfolio-item.hidden-item {
+      display: none;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary": "#ffffff",
+            "surface-tint": "#5a605c",
+            "on-tertiary-fixed-variant": "#5c420a",
+            "on-primary-container": "#868b87",
+            "primary-fixed": "#dfe4df",
+            "on-secondary-fixed-variant": "#773217",
+            "inverse-surface": "#30312f",
+            "on-surface": "#1b1c1a",
+            "primary": "#090e0b",
+            "surface-variant": "#e4e2df",
+            "on-error-container": "#93000a",
+            "primary-container": "#1f2421",
+            "inverse-primary": "#c3c8c3",
+            "on-secondary-container": "#783218",
+            "surface-bright": "#fbf9f6",
+            "tertiary-fixed-dim": "#e7c17e",
+            "tertiary-fixed": "#ffdea8",
+            "secondary-fixed": "#ffdbcf",
+            "background": "#fbf9f6",
+            "outline": "#747874",
+            "secondary": "#95482c",
+            "secondary-container": "#ff9d7a",
+            "outline-variant": "#c4c7c3",
+            "surface-container-highest": "#e4e2df",
+            "on-primary-fixed-variant": "#434844",
+            "surface": "#fbf9f6",
+            "on-tertiary-fixed": "#271900",
+            "on-surface-variant": "#444845",
+            "surface-container-low": "#f5f3f0",
+            "primary-fixed-dim": "#c3c8c3",
+            "on-error": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#a68548",
+            "tertiary-container": "#302000",
+            "secondary-fixed-dim": "#ffb59c",
+            "surface-dim": "#dbdad7",
+            "error-container": "#ffdad6",
+            "surface-container": "#efeeeb",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ba1a1a",
+            "inverse-on-surface": "#f2f0ed",
+            "on-secondary-fixed": "#390c00",
+            "tertiary": "#140b00",
+            "surface-container-high": "#eae8e5",
+            "on-background": "#1b1c1a",
+            "on-primary-fixed": "#181d1a"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          spacing: {
+            "space-xs": "0.375rem",
+            "gutter": "2rem",
+            "margin": "4rem",
+            "space-xl": "3.5rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem",
+            "space-lg": "2.25rem",
+            "margin-mobile": "1.5rem",
+            "gutter-mobile": "1rem"
+          },
+          fontFamily: {
+            "headline-sm": ["Playfair Display", "serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Playfair Display", "serif"],
+            "headline-lg": ["Playfair Display", "serif"],
+            "label-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "display-mobile": ["Playfair Display", "serif"],
+            "display": ["Playfair Display", "serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg-mobile": ["Playfair Display", "serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          fontSize: {
+            "headline-sm": ["22px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "500" }],
+            "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+            "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "0em", fontWeight: "500" }],
+            "headline-lg": ["40px", { lineHeight: "50px", letterSpacing: "-0.015em", fontWeight: "400" }],
+            "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.08em", fontWeight: "600" }],
+            "display-mobile": ["38px", { lineHeight: "46px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "display": ["56px", { lineHeight: "68px", letterSpacing: "-0.02em", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400" }],
+            "headline-lg-mobile": ["30px", { lineHeight: "38px", letterSpacing: "0em", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "30px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.1em", fontWeight: "600" }],
+            "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.12em", fontWeight: "600" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+
+  <!-- HEADER NAVIGATION -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-surface-container">
+    <div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-space-sm group">
+        <div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-display text-xl font-bold group-hover:bg-secondary transition-colors">
+          S
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">Samiksha</span>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Interior Designs</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden xl:flex items-center gap-space-lg">
+        <a class="tracking-wider uppercase transition-colors py-1 text-primary font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-secondary" href="#">Home</a>
+        <a class="font-label-lg text-label-lg tracking-wider uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="#services">Services</a>
+        <a class="font-label-lg text-label-lg tracking-wider uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="#portfolio-gallery">Portfolio</a>
+        <a class="font-label-lg text-label-lg tracking-wider uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="#process">Process</a>
+        <a class="font-label-lg text-label-lg tracking-wider uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="#testimonials">Reviews</a>
+        <a class="font-label-lg text-label-lg tracking-wider uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="#consultation-booking">Contact</a>
+      </nav>
+
+      <!-- Actions & CTA -->
+      <div class="flex items-center gap-space-sm sm:gap-space-md">
+        <!-- Direct WhatsApp Call/Chat -->
+        <a class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" href="https://wa.me/919845012345?text=Hello%20Samiksha%20Interior%20Designs,%20I%20would%20like%20to%20inquire%20about%20interior%20services" target="_blank" rel="noopener noreferrer">
+          <span class="material-symbols-outlined text-[16px] text-secondary">chat</span>
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">WhatsApp</span>
+        </a>
+
+        <!-- Book Consultation CTA -->
+        <a class="inline-flex items-center justify-center px-space-md py-space-xs lg:py-space-sm bg-primary-container text-on-primary rounded-lg font-label-lg text-label-lg uppercase tracking-wider transition-all duration-300 hover:bg-secondary hover:text-on-secondary shadow-[0_1px_8px_rgba(0,0,0,0.04)]" href="#consultation-booking">
+          <span>Book Free Consultation</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="xl:hidden w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer / Menu -->
+    <div id="mobileMenu" class="hidden xl:hidden bg-surface border-b border-surface-container px-margin-mobile py-space-md shadow-lg transition-all">
+      <nav class="flex flex-col gap-space-sm font-label-lg text-label-lg uppercase tracking-wider">
+        <a class="text-primary font-semibold py-2 border-b border-surface-container" href="#" onclick="toggleMobileMenu()">Home</a>
+        <a class="text-on-surface-variant hover:text-primary py-2 border-b border-surface-container" href="#services" onclick="toggleMobileMenu()">Services</a>
+        <a class="text-on-surface-variant hover:text-primary py-2 border-b border-surface-container" href="#portfolio-gallery" onclick="toggleMobileMenu()">Portfolio</a>
+        <a class="text-on-surface-variant hover:text-primary py-2 border-b border-surface-container" href="#process" onclick="toggleMobileMenu()">Process</a>
+        <a class="text-on-surface-variant hover:text-primary py-2 border-b border-surface-container" href="#testimonials" onclick="toggleMobileMenu()">Reviews</a>
+        <a class="text-on-surface-variant hover:text-primary py-2" href="#consultation-booking" onclick="toggleMobileMenu()">Contact Atelier</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+    <div class="flex flex-col w-full">
+
+      <!-- HERO SECTION -->
+      <section class="relative w-full bg-surface pt-space-md pb-space-xl lg:py-space-xl overflow-hidden">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+            
+            <!-- Hero Content (Left 7 Cols) -->
+            <div class="lg:col-span-7 flex flex-col items-start pr-0 lg:pr-space-md z-10">
+              <div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-full mb-space-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Bengaluru • Turnkey Interiors &amp; Bespoke Homes</span>
+              </div>
+              
+              <h1 class="font-display text-display leading-tight text-primary mb-space-md tracking-tight">
+                Transforming Everyday Spaces into <span class="italic font-normal text-secondary">Timeless</span> Sanctuaries
+              </h1>
+              
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-lg leading-relaxed">
+                Bespoke residential and commercial turnkey interior creations tailored to your lifestyle, climate, and everyday sensory comfort across Karnataka.
+              </p>
+              
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm w-full sm:w-auto mb-space-lg">
+                <a class="inline-flex items-center justify-center px-space-lg py-space-sm bg-primary-container text-on-primary rounded font-label-lg text-label-lg uppercase tracking-wider transition-all duration-300 hover:bg-secondary hover:text-on-secondary shadow-md hover:shadow-xl group" href="#consultation-booking">
+                  <span>Schedule a Consultation</span>
+                  <span class="material-symbols-outlined ml-2 text-[18px] transition-transform duration-300 group-hover:translate-x-1 text-on-tertiary-container">calendar_today</span>
+                </a>
+                <a class="inline-flex items-center justify-center px-space-lg py-space-sm bg-surface-container text-on-surface rounded font-label-lg text-label-lg uppercase tracking-wider transition-colors duration-200 hover:bg-surface-variant" href="#portfolio-gallery">
+                  <span>Explore Our Work</span>
+                  <span class="material-symbols-outlined ml-2 text-[18px]">north_east</span>
+                </a>
+              </div>
+              
+              <!-- Trust Micro-pill -->
+              <div class="flex items-center gap-space-sm px-space-md py-space-xs bg-surface-container-low rounded-full">
+                <div class="flex items-center text-on-tertiary-container">
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface">
+                  <span class="font-semibold text-primary">4.9/5 Rating</span> from 120+ Homeowners across Whitefield, Sarjapur &amp; Indiranagar
+                </p>
+              </div>
+            </div>
+
+            <!-- Hero Visual (Right 5 Cols) -->
+            <div class="lg:col-span-5 relative mt-space-lg lg:mt-0">
+              <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-surface-container shadow-2xl group">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Luxurious modern open-concept living room and interior design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsgr4Px-ozEHkmi_NR9roxNngqDA4MB5hYcqO57YcixOQUS8SLIsE-YiXroZAhBl-iBJdf3QOWoukIXddjmeS5Vp8xVsPnACjqHiZfHHwp-lQOh4d1NERhT-wOi3w-fdEPwqVhol6Flt27V2EU1PdGLKmT1cvbfEtBggm9eqDjDvwXXeCRY3oV5hLmjw9Bz6U7HctIY5ycZdUbeQZC9I0Z2v8jQgW_GjfgOgnvdg"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/10 to-transparent"></div>
+                
+                <!-- Floating Architectural Badge -->
+                <div class="absolute bottom-space-md left-space-md right-space-md p-space-md bg-surface/90 backdrop-blur-md rounded-lg shadow-lg">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block font-semibold">Featured Commission</span>
+                      <h2 class="font-headline-sm text-headline-sm text-primary">The Whitefield Villa Project</h2>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">Completed in 42 Days • 4,200 sq.ft Bare-shell Turnkey</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-[20px]">architecture</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Decorative Architectural Stamp Accent -->
+              <div class="hidden sm:flex absolute -top-4 -right-4 w-24 h-24 rounded-full bg-surface-container-highest p-2 flex-col items-center justify-center text-center shadow-md">
+                <span class="font-label-sm text-[9px] uppercase tracking-tighter text-on-surface-variant leading-none">Studio Est.</span>
+                <span class="font-headline-sm text-headline-sm font-bold text-primary my-0.5">2018</span>
+                <span class="font-label-sm text-[8px] uppercase tracking-wider text-secondary leading-none">Bengaluru</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY METRICS & TRUST BAR -->
+      <section class="w-full bg-surface-container-low py-space-lg">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter lg:gap-gutter">
+            
+            <div class="flex flex-col p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-space-xs">
+                <span class="material-symbols-outlined text-[22px]">roofing</span>
+              </div>
+              <span class="font-headline-md text-headline-md text-primary font-bold">100+</span>
+              <span class="font-label-lg text-label-lg text-secondary uppercase tracking-wider mt-1">Homes Transformed</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">Across Karnataka's prime enclaves</span>
+            </div>
+
+            <div class="flex flex-col p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary mb-space-xs">
+                <span class="material-symbols-outlined text-[22px]">verified</span>
+              </div>
+              <span class="font-headline-md text-headline-md text-primary font-bold">10-Year</span>
+              <span class="font-label-lg text-label-lg text-secondary uppercase tracking-wider mt-1">Warranty Promise</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">German hardware &amp; anti-termite ply</span>
+            </div>
+
+            <div class="flex flex-col p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-space-xs">
+                <span class="material-symbols-outlined text-[22px]">timer</span>
+              </div>
+              <span class="font-headline-md text-headline-md text-primary font-bold">45-Day</span>
+              <span class="font-label-lg text-label-lg text-secondary uppercase tracking-wider mt-1">Move-In Handover</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">Strict penalty-backed schedule</span>
+            </div>
+
+            <div class="flex flex-col p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+              <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-tertiary-container mb-space-xs">
+                <span class="material-symbols-outlined text-[22px]">design_services</span>
+              </div>
+              <span class="font-headline-md text-headline-md text-primary font-bold">100%</span>
+              <span class="font-label-lg text-label-lg text-secondary uppercase tracking-wider mt-1">Custom Joinery</span>
+              <span class="font-body-sm text-body-sm text-on-surface-variant">Zero modular template replication</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES GRID -->
+      <section class="w-full bg-surface py-space-xl" id="services">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+          
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
+            <div>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-1">Curated Expertise</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary">Comprehensive Interior Services for Modern Living</h2>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-4 md:mt-0">
+              From bare-shell structural adaptation to curated artisan textures, we manage every discipline under one roof with German precision machinery.
+            </p>
+          </div>
+
+          <!-- 4 Rich Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+            
+            <!-- Service 1: Kitchens -->
+            <div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-md">
+              <div>
+                <div class="aspect-[16/9] w-full rounded-lg overflow-hidden mb-space-md bg-surface-container-highest">
+                  <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Modern luxury modular kitchen with fluted oak and waterfall island" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkcs5bnYo_pUbjfDNLTiMeZNIaSkiSQkLhlHrBB6KELqTD6wvzGRp6JD37bj1sSAAoCm0DN1q44aWNNNDj0HH8q1EzZkDCa1PU-ZJ3V-LwM11yI5C3wucgRVpU0L1rAOcflGETmCC3YypEn3qYm8M-jaCFmroH_fNrFXyeMB_Os0OIfUMh9UcY49HzvVZOoRWVu-x1O5H62J6LjxSI1mCINuWASFpcXFXNJBcfvQ"/>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Specialized Joinery</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">01</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-space-xs">Modular Kitchens &amp; Wardrobes</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                  Ergonomic Italian pull-out mechanisms, Blum German soft-close systems, anti-fingerprint acrylics, and tactile fluted oak veneers with integrated warm LED channels.
+                </p>
+                <ul class="flex flex-col gap-1.5 mb-space-md font-body-sm text-body-sm text-on-surface">
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> 7-ply Marine BWP grade core boiling water proof</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> Zero-gap laser edged finishes with German PUR adhesive</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> Walk-in closets with tinted fluted glass &amp; acoustic lining</li>
+                </ul>
+              </div>
+              <a class="inline-flex items-center font-label-lg text-label-lg uppercase tracking-wider text-primary group-hover:text-secondary font-semibold transition-colors" href="#consultation-booking">
+                <span>Request Custom Quote</span>
+                <span class="material-symbols-outlined ml-1 text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+              </a>
+            </div>
+
+            <!-- Service 2: Turnkey Interiors -->
+            <div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-md">
+              <div>
+                <div class="aspect-[16/9] w-full rounded-lg overflow-hidden mb-space-md bg-surface-container-highest">
+                  <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Luxury apartment complete turnkey execution with double height living room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJNHluCt7apEib5tdowodF8SBcfvElGS57TGd-TvAymyVDsDaeen30KvExndwHeGXtCFMtONaWKhmamor5AF8YzdIopij7HiNEJqoXGAnqdzKXoAe3AQtX4FyJL30qUGdaw8fy_9SVcCMDTqfCF2atWHYTmEklUDgaWHSY7X3L_FyP-tRUHn6JEBR1gxi9dJD1ULpi7hwdSFk32pwhZiSrTkq_ESjxgjGW0wF6qA"/>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">End-to-End Handover</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">02</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-space-xs">Complete Home Turnkey Interiors</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                  Complete single-point accountability from bare-shell civil demolition, MEP re-routing, smart automated lighting, and false ceilings through to final soft furnishing installation.
+                </p>
+                <ul class="flex flex-col gap-1.5 mb-space-md font-body-sm text-body-sm text-on-surface">
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> Dedicated on-site civil project engineer daily</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> Comprehensive electrical load audit and home automation</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> Fixed milestone-linked escrows with zero budget creep</li>
+                </ul>
+              </div>
+              <a class="inline-flex items-center font-label-lg text-label-lg uppercase tracking-wider text-primary group-hover:text-secondary font-semibold transition-colors" href="#consultation-booking">
+                <span>Request Custom Quote</span>
+                <span class="material-symbols-outlined ml-1 text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+              </a>
+            </div>
+
+            <!-- Service 3: Living & Bedroom Styling -->
+            <div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-md">
+              <div>
+                <div class="aspect-[16/9] w-full rounded-lg overflow-hidden mb-space-md bg-surface-container-highest">
+                  <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Master bedroom suite styled with vertical fluted oak panelling and ambient sconces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0yODJB25ZRwo38loYIJXl4hE625keVDEpxGKBwZyDnBW0fGuZcS-BfQkXmU8pqqjl2yFS7i1mb4bBPxBRztXkTkiVOMHAr_BW-H_3QItm5td258zOTdEQm8TFzBf6sOuSedPYUkbs3L8jb0MJAqkUbl-7M9U2r6N4o1umtag31RY_Dzk_xrKvrp-vobR55qRO1JyOypk8GLUMmIkHLElshXeQUPD3nsMZcWNU0w"/>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Artisanal Curation</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">03</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-space-xs">Living &amp; Bedroom Styling</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                  Bespoke mood lighting, acoustic timber wall panelling, custom-crafted bouclé sofas, travertine stone coffee tables, and curated artisanal decor that breathes personality.
+                </p>
+                <ul class="flex flex-col gap-1.5 mb-space-md font-body-sm text-body-sm text-on-surface">
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> Custom-scaled furniture crafted in our Bengaluru workshop</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> Tactile fabrics: Belgian linens, rich velvets &amp; boucle</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> Biophilic plant curation suited to local light conditions</li>
+                </ul>
+              </div>
+              <a class="inline-flex items-center font-label-lg text-label-lg uppercase tracking-wider text-primary group-hover:text-secondary font-semibold transition-colors" href="#consultation-booking">
+                <span>Request Custom Quote</span>
+                <span class="material-symbols-outlined ml-1 text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+              </a>
+            </div>
+
+            <!-- Service 4: 3D Visualisation -->
+            <div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-md">
+              <div>
+                <div class="aspect-[16/9] w-full rounded-lg overflow-hidden mb-space-md bg-surface-container-highest">
+                  <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="3D Architectural Visualization compared to final physical interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9aoWMOgNVYcIHt-PE3x_XVGgMac0KZ0dUyCiMCtyHJk5-X3lpjc1_Wvclqvt0tLIv0CvS8xADS0io1-PTw3gFYAZ1sypwHI78nMue3XUYBKcxPFA4D9biE0Ej8iAIKmwRnXeEvxOley2INzGcfK6Ej52gpdaA_bbB2aChkHIgnFNNme1eVsMi3EHNGVYXES2-GMR13LHIdYoa892BDcRM6SJFvpB_CgSB-N9ojg"/>
+                </div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Virtual Reality &amp; Planning</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">04</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-space-xs">3D Visualisation &amp; Floor Planning</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                  Immersive photorealistic 3D renders, VR walkthroughs, and millimetre-accurate MEP working drawings before civil kickoff to ensure absolute visual certainty.
+                </p>
+                <ul class="flex flex-col gap-1.5 mb-space-md font-body-sm text-body-sm text-on-surface">
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> Photorealistic lighting analysis matching site cardinal orientation</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> Virtual Reality headset studio session with material swapping</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span> Complete structural, electrical, and plumbing blue-prints</li>
+                </ul>
+              </div>
+              <a class="inline-flex items-center font-label-lg text-label-lg uppercase tracking-wider text-primary group-hover:text-secondary font-semibold transition-colors" href="#consultation-booking">
+                <span>Request Custom Quote</span>
+                <span class="material-symbols-outlined ml-1 text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PORTFOLIO / GALLERY (INTERACTIVE FILTER) -->
+      <section class="w-full bg-surface-container-lowest py-space-xl" id="portfolio-gallery">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+          
+          <!-- Section Header -->
+          <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-lg">
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-1">Our Atelier Portfolio</span>
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-2">Spaces Crafted with Intention &amp; Soul</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Explore our recent bespoke residential transformations across Bengaluru's distinguished residences and villas.
+            </p>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div class="flex items-center justify-center flex-wrap gap-2 mb-space-lg" id="portfolioFilterContainer">
+            <button data-filter="all" class="filter-btn px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider shadow-sm transition-all">All Projects</button>
+            <button data-filter="living" class="filter-btn px-space-md py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-all">Living Rooms</button>
+            <button data-filter="kitchen" class="filter-btn px-space-md py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-all">Kitchens &amp; Dining</button>
+            <button data-filter="bedroom" class="filter-btn px-space-md py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-all">Master Suites</button>
+            <button data-filter="penthouse" class="filter-btn px-space-md py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-all">Penthouses</button>
+          </div>
+
+          <!-- Portfolio Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="portfolioGrid">
+            
+            <!-- Project 1: Courtyard (Living) -->
+            <div class="portfolio-item flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="living">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-surface-container relative">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="The Courtyard Residence in Sarjapur Bengaluru" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOiCVwd87ik1JykVHU9bHKaOeTUZuZtJ-8FzHRulSFrgdfgn3pNHtGs8yBE6dziHbSkdiVIJWJrz4ik7gYYHnV-P2noBxXp5UvjK21uxSKE3K0dC809W9Fr9ZGDFhVVzMsMYTiwTHtP6dUv_Pjz3SehBvOwpuIhuOyYfMEmat_peVudslZR5dAFbNquODXs88lrrOeU63xpxpbsTO5h9RIivu8pJpVpf31QUw2CA"/>
+                <div class="absolute top-3 left-3 px-space-xs py-1 rounded bg-surface/90 backdrop-blur-sm font-label-sm text-label-sm uppercase tracking-widest text-primary">Completed 2024</div>
+              </div>
+              <div class="p-space-md flex flex-col justify-between flex-grow">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Sarjapur Road • 4BHK Villa</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mt-1 mb-2">The Courtyard Residence</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Integrating central vernacular courtyards with streamlined contemporary timber screens and bespoke micro-cement finishes.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+                  <span>3,800 sq.ft</span>
+                  <a href="#consultation-booking" class="font-label-sm text-label-sm uppercase font-semibold text-primary group-hover:text-secondary flex items-center">Inquire Plan <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2: Penthouse -->
+            <div class="portfolio-item flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="penthouse">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-surface-container relative">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Minimalist Modern Penthouse in HSR Layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpnyk5fF0KyGz0dIxUavTkkmrQHstEeYP27m2BgGzujLjI7ofm0b4K7eHyXxif7F-qLMqWCT4cApIb8lWrA_Y7Ee243geTbuFYxPcnAAbsmIsM29gemZKn7K01ZZ_uZ_O_HMsHCLQ9XIGT0jDbSjD5TarBAc48cW4gLOS4zlk3zWtwY1R5NzYB8w_6dJguqFkMf9SFpvmhg0mMmrSFvxZ5NP6HcczrYBecfapmMA"/>
+                <div class="absolute top-3 left-3 px-space-xs py-1 rounded bg-surface/90 backdrop-blur-sm font-label-sm text-label-sm uppercase tracking-widest text-primary">Completed 2024</div>
+              </div>
+              <div class="p-space-md flex flex-col justify-between flex-grow">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">HSR Layout • 3BHK Apartment</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mt-1 mb-2">Minimalist Serenity</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    A pared-back calm retreat focusing on tactile limestone surfaces, concealed handleless joinery, and sculptural indirect lighting.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+                  <span>2,450 sq.ft</span>
+                  <a href="#consultation-booking" class="font-label-sm text-label-sm uppercase font-semibold text-primary group-hover:text-secondary flex items-center">Inquire Plan <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3: Living / Penthouse -->
+            <div class="portfolio-item flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="penthouse">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-surface-container relative">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Terra and Teak Penthouse in Indiranagar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIY6r09I8cqb4ROjwoy8aiWSQPUr2Cuio-8rg2aIsgNSV1-L359PtsXM9XfcYkoL9WQe3XNt0Bke7kHSuv1bMhtSUu0_GeBG18vhxx3pgI76WSvqSHJ5eAzNvatY9HlQ2Lc0MUYdYsiFFyTRKvrn0gzLxDj3wQ6prTJbPUc5QNQaeSAe8JerVKttsgk6U_8Ij324ABAWjRaiAUXUflUf42fNzmX5C0WGERaHOXew"/>
+                <div class="absolute top-3 left-3 px-space-xs py-1 rounded bg-surface/90 backdrop-blur-sm font-label-sm text-label-sm uppercase tracking-widest text-primary">Completed 2023</div>
+              </div>
+              <div class="p-space-md flex flex-col justify-between flex-grow">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Indiranagar • Penthouse</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mt-1 mb-2">Terra &amp; Teak Penthouse</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Harmonizing rich Indian terracotta tones with aged teak elements, creating deep warmth atop the city's verdant canopy.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+                  <span>4,100 sq.ft</span>
+                  <a href="#consultation-booking" class="font-label-sm text-label-sm uppercase font-semibold text-primary group-hover:text-secondary flex items-center">Inquire Plan <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4: Kitchen -->
+            <div class="portfolio-item flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="kitchen">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-surface-container relative">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Sage Oak Modular Kitchen in Whitefield" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3VPN0sjwFfcvl7DkJV2U0DuQjUdwRYY1OHblGUdUWROCiQWbv7NcgKm91tHfhlExDiT7j71aT28pYUsJF5VGSJPQtC98wsl1gbQHWNuAz86HFlUJiHx7nV1lsU0r_Q6nBWHEqH3H4mjBLsANO50kuDlgrfYFUSz-FxKOGPMMcIPGtiJ_U4BMw0T4cG_fU6QGd4RWEfkuHAw8QtMbCkSn33GTfr5Oy8rNQS8Eqdg"/>
+                <div class="absolute top-3 left-3 px-space-xs py-1 rounded bg-surface/90 backdrop-blur-sm font-label-sm text-label-sm uppercase tracking-widest text-primary">Completed 2024</div>
+              </div>
+              <div class="p-space-md flex flex-col justify-between flex-grow">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Whitefield • Culinary Suite</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mt-1 mb-2">Sage Oak Modular Kitchen</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Bespoke ergonomic zoning featuring concealed walk-in pantry, wine cellar cooling, and silent Italian glide mechanisms.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+                  <span>650 sq.ft Kitchen</span>
+                  <a href="#consultation-booking" class="font-label-sm text-label-sm uppercase font-semibold text-primary group-hover:text-secondary flex items-center">Inquire Plan <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 5: Bedroom -->
+            <div class="portfolio-item flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="bedroom">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-surface-container relative">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="The Walnut Haven Master Suite in Koramangala" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhVyhYsAi3Pp6c31Hjy9ssm25VrdSow_IE9HARjk3RxqcxgsdeFjF1bWKnUL1DfHvLunYhgHwlgMTNBfVe81G2P94BEdlLP1X6_Ka_leypxvz_Sutd1y4cPiuI3-WMJtq4UrRXdNxpSt3J0pEfGoiW_lHzufYXc0zkta0dMWqp5-7Lc9CIBOsKrgf14g9tyF4zZFCOTHQUsiN87WjA45MTtt9Wu4Zx1v-lmF0v9Q"/>
+                <div class="absolute top-3 left-3 px-space-xs py-1 rounded bg-surface/90 backdrop-blur-sm font-label-sm text-label-sm uppercase tracking-widest text-primary">Completed 2024</div>
+              </div>
+              <div class="p-space-md flex flex-col justify-between flex-grow">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Koramangala • Master Suite</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mt-1 mb-2">The Walnut Haven</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Acoustically isolated private master sanctuary designed with customized walnut panelling and walk-in dressing atrium.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+                  <span>720 sq.ft Suite</span>
+                  <a href="#consultation-booking" class="font-label-sm text-label-sm uppercase font-semibold text-primary group-hover:text-secondary flex items-center">Inquire Plan <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 6: Living -->
+            <div class="portfolio-item flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group" data-category="living">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-surface-container relative">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Lakeview Horizon Flat in Hebbal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIadra6M79tMHh89VC3crEdN7owCR86vYlv14aU5bo-t1vEbxkGie0Mpzr6qklqgCIDZhC296AV73YDDHz_vKIB1B8CbiOEFbziJ9dsF2kd5Dm_1vwnE2ewrAbQ_dDe1VYgKo7XuwpUHNkfnmXncuvl64B3aInA1ZGd55u19h42AOEdZZflaIh_cxo87ZamUo1sXBg_oU16MU7-ryVV5tg88DvGIo1V6l1CF3RLg"/>
+                <div class="absolute top-3 left-3 px-space-xs py-1 rounded bg-surface/90 backdrop-blur-sm font-label-sm text-label-sm uppercase tracking-widest text-primary">Completed 2023</div>
+              </div>
+              <div class="p-space-md flex flex-col justify-between flex-grow">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Hebbal • Lakefront Residence</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mt-1 mb-2">Lakeview Horizon Flat</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Designed to maximize ambient natural lake light using mirrored reflective bronze pillars, open corridors, and low-slung seating.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+                  <span>3,100 sq.ft</span>
+                  <a href="#consultation-booking" class="font-label-sm text-label-sm uppercase font-semibold text-primary group-hover:text-secondary flex items-center">Inquire Plan <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- DESIGN PROCESS (4-STEP TIMELINE) -->
+      <section class="w-full bg-surface-container-low py-space-xl" id="process">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+          
+          <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-xl">
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-1">Our Working Philosophy</span>
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-2">A Seamless 4-Step Journey to Your Dream Home</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Punctual, transparent, and completely stress-free. We coordinate all logistics from factory to site.
+            </p>
+          </div>
+
+          <!-- 4 Connected Timeline Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative">
+            
+            <!-- Step 1 -->
+            <div class="flex flex-col p-space-lg rounded-xl bg-surface shadow-sm relative group hover:bg-surface-container-lowest transition-colors">
+              <div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold font-headline-sm text-headline-sm mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                01
+              </div>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold mb-1">Phase One</span>
+              <h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Discovery &amp; Site Visit</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                In-depth spatial audit, lifestyle questionnaire, and structural 3D laser measurements at your property across Bengaluru.
+              </p>
+              <div class="mt-space-md pt-space-xs flex items-center text-on-surface-variant font-body-sm text-body-sm">
+                <span class="material-symbols-outlined text-[16px] mr-1 text-on-tertiary-container">schedule</span> 3–5 Days
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex flex-col p-space-lg rounded-xl bg-surface shadow-sm relative group hover:bg-surface-container-lowest transition-colors">
+              <div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold font-headline-sm text-headline-sm mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                02
+              </div>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold mb-1">Phase Two</span>
+              <h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">3D Modeling &amp; Curation</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Photorealistic VR walkthroughs and tactile material selection (veneers, quartz, fabrics, finishes) at our Dommasandra studio.
+              </p>
+              <div class="mt-space-md pt-space-xs flex items-center text-on-surface-variant font-body-sm text-body-sm">
+                <span class="material-symbols-outlined text-[16px] mr-1 text-on-tertiary-container">schedule</span> 7–10 Days
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex flex-col p-space-lg rounded-xl bg-surface shadow-sm relative group hover:bg-surface-container-lowest transition-colors">
+              <div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold font-headline-sm text-headline-sm mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                03
+              </div>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold mb-1">Phase Three</span>
+              <h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Factory Craft &amp; Civil</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Precision automated CNC joinery, German hardware assembly, paired with synchronised on-site false ceiling and electricals.
+              </p>
+              <div class="mt-space-md pt-space-xs flex items-center text-on-surface-variant font-body-sm text-body-sm">
+                <span class="material-symbols-outlined text-[16px] mr-1 text-on-tertiary-container">schedule</span> 25–30 Days
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex flex-col p-space-lg rounded-xl bg-surface shadow-sm relative group hover:bg-surface-container-lowest transition-colors">
+              <div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold font-headline-sm text-headline-sm mb-space-md group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                04
+              </div>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold mb-1">Phase Four</span>
+              <h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Handover &amp; Deep Clean</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                150-point quality audit, styling touches, deep chemical cleaning, and turnkey key handover on the exact promised date.
+              </p>
+              <div class="mt-space-md pt-space-xs flex items-center text-on-surface-variant font-body-sm text-body-sm">
+                <span class="material-symbols-outlined text-[16px] mr-1 text-on-tertiary-container">schedule</span> Day 45 Move-in
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS / CLIENT STORIES -->
+      <section class="w-full bg-surface py-space-xl" id="testimonials">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+          
+          <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-lg">
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-1">Voices of Delight</span>
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-2">Stories from Homeowners Who Found Their Sanctuary</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Hear direct experiences from clients who entrusted their dream spaces to our design atelier.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            
+            <!-- Testimonial 1 -->
+            <div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center text-on-tertiary-container mb-space-md">
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface italic leading-relaxed mb-space-md">
+                  "Samiksha turned our bare-shell 4BHK villa in Sarjapur into an organic, tranquil oasis. Their 45-day commitment was spot on — not a single day of delay. The fluted timber lighting wall in our living room gets compliments from every visitor."
+                </p>
+              </div>
+              <div class="flex items-center gap-space-sm pt-space-sm bg-surface-container/30 rounded-lg p-2">
+                <div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold font-label-lg">
+                  AR
+                </div>
+                <div>
+                  <h4 class="font-headline-sm text-headline-sm text-primary leading-none text-base">Ananya &amp; Rohit Sharma</h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Villa Verde, Sarjapur</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center text-on-tertiary-container mb-space-md">
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface italic leading-relaxed mb-space-md">
+                  "Being a doctor, my schedule didn't allow managing carpenters or multiple vendors. Samiksha handled everything seamlessly from demolition to deep cleaning. The modular kitchen's quartz finish and hardware quality are truly international."
+                </p>
+              </div>
+              <div class="flex items-center gap-space-sm pt-space-sm bg-surface-container/30 rounded-lg p-2">
+                <div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold font-label-lg">
+                  VR
+                </div>
+                <div>
+                  <h4 class="font-headline-sm text-headline-sm text-primary leading-none text-base">Dr. Vikram Rao</h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Prestige Palms, Whitefield</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center text-on-tertiary-container mb-space-md">
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface italic leading-relaxed mb-space-md">
+                  "The 3D photorealistic render matched the finished flat 1:1. Zero surprises, completely transparent itemized pricing, and top-notch post-handover responsiveness. Truly an exceptional experience in Bengaluru's design landscape."
+                </p>
+              </div>
+              <div class="flex items-center gap-space-sm pt-space-sm bg-surface-container/30 rounded-lg p-2">
+                <div class="w-10 h-10 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-bold font-label-lg">
+                  SN
+                </div>
+                <div>
+                  <h4 class="font-headline-sm text-headline-sm text-primary leading-none text-base">Sunita &amp; Nikhil Nair</h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Total Environment, Off Sarjapur</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT & LOCATION SECTION -->
+      <section class="w-full bg-surface-container-lowest py-space-xl" id="consultation-booking">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+            
+            <!-- Consultation Booking Form (Left 7 Cols) -->
+            <div class="lg:col-span-7 p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col">
+              <div class="mb-space-md">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-1">Direct Atelier Inquiry</span>
+                <h2 class="font-headline-md text-headline-md text-primary">Book Free Studio Consultation &amp; Site Audit</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Tell us about your spatial aspirations. A Senior Design Architect will connect with floor plans and complimentary material insights.
+                </p>
+              </div>
+
+              <form class="flex flex-col gap-space-sm" id="leadForm">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                  <div class="flex flex-col">
+                    <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1">Full Name *</label>
+                    <input id="clientName" class="h-12 px-space-sm rounded bg-surface border border-surface-container-high focus:outline-none focus:ring-1 focus:ring-primary text-on-surface font-body-md text-body-md" placeholder="e.g. Priya Sundaram" required="" type="text"/>
+                  </div>
+                  <div class="flex flex-col">
+                    <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1">Phone Number (+91) *</label>
+                    <input id="clientPhone" class="h-12 px-space-sm rounded bg-surface border border-surface-container-high focus:outline-none focus:ring-1 focus:ring-primary text-on-surface font-body-md text-body-md" placeholder="+91 98450 00000" required="" type="tel"/>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                  <div class="flex flex-col">
+                    <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1">Email Address *</label>
+                    <input id="clientEmail" class="h-12 px-space-sm rounded bg-surface border border-surface-container-high focus:outline-none focus:ring-1 focus:ring-primary text-on-surface font-body-md text-body-md" placeholder="priya@example.com" required="" type="email"/>
+                  </div>
+                  <div class="flex flex-col">
+                    <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1">Property Type *</label>
+                    <select id="propertyType" class="h-12 px-space-sm rounded bg-surface border border-surface-container-high focus:outline-none focus:ring-1 focus:ring-primary text-on-surface font-body-md text-body-md">
+                      <option value="3BHK Luxury Apartment">3BHK Luxury Apartment</option>
+                      <option value="4BHK / 5BHK Villa">4BHK / 5BHK Villa</option>
+                      <option value="Penthouse / Duplex">Penthouse / Duplex</option>
+                      <option value="Commercial Studio / Office">Commercial Studio / Office</option>
+                      <option value="Partial Renovation">Partial Renovation (Kitchen &amp; Living)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="flex flex-col">
+                  <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1">Estimated Budget (INR)</label>
+                  <div class="grid grid-cols-3 gap-2">
+                    <label class="flex items-center justify-center p-2.5 rounded bg-surface border border-surface-container cursor-pointer text-center text-on-surface font-body-sm text-body-sm hover:bg-surface-variant transition-colors has-[:checked]:bg-primary has-[:checked]:text-on-primary">
+                      <input class="sr-only" name="budget" type="radio" value="₹15L – ₹25L"/>
+                      ₹15L – ₹25L
+                    </label>
+                    <label class="flex items-center justify-center p-2.5 rounded bg-surface border border-surface-container cursor-pointer text-center text-on-surface font-body-sm text-body-sm hover:bg-surface-variant transition-colors has-[:checked]:bg-primary has-[:checked]:text-on-primary">
+                      <input checked="" class="sr-only" name="budget" type="radio" value="₹25L – ₹50L"/>
+                      ₹25L – ₹50L
+                    </label>
+                    <label class="flex items-center justify-center p-2.5 rounded bg-surface border border-surface-container cursor-pointer text-center text-on-surface font-body-sm text-body-sm hover:bg-surface-variant transition-colors has-[:checked]:bg-primary has-[:checked]:text-on-primary">
+                      <input class="sr-only" name="budget" type="radio" value="₹50L+ (Bespoke)"/>
+                      ₹50L+ (Bespoke)
+                    </label>
+                  </div>
+                </div>
+
+                <div class="flex flex-col">
+                  <label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1">Brief Space Vision / Site Location</label>
+                  <textarea id="clientNotes" class="p-space-sm rounded bg-surface border border-surface-container-high focus:outline-none focus:ring-1 focus:ring-primary text-on-surface font-body-md text-body-md resize-none" placeholder="Tell us about your handover date, layout preferences, or design desires..." rows="3"></textarea>
+                </div>
+
+                <button class="h-12 w-full mt-2 bg-primary-container text-on-primary rounded font-label-lg text-label-lg uppercase tracking-wider hover:bg-secondary hover:text-on-secondary transition-all duration-300 shadow-md flex items-center justify-center gap-2" type="submit">
+                  <span>Book Free Studio Consultation</span>
+                  <span class="material-symbols-outlined text-[18px]">send</span>
+                </button>
+
+                <div id="formSuccess" class="hidden p-space-sm rounded bg-primary text-on-primary font-body-sm text-body-sm text-center">
+                  <p class="font-semibold mb-1">✓ Thank you! Inquiry received.</p>
+                  <p>Our Senior Architect will reach out within 4 business hours to confirm your consultation slot.</p>
+                  <div class="mt-2">
+                    <a id="whatsappInstantLink" href="#" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-white text-xs font-semibold hover:opacity-90">
+                      <span class="material-symbols-outlined text-[14px]">chat</span> Chat on WhatsApp Now
+                    </a>
+                  </div>
+                </div>
+
+                <p class="font-body-sm text-[12px] text-on-surface-variant text-center mt-1">
+                  Zero spam. 100% confidential. You'll hear directly from our Senior Designer within 4 business hours.
+                </p>
+              </form>
+            </div>
+
+            <!-- Studio Business Card & Map (Right 5 Cols) -->
+            <div class="lg:col-span-5 flex flex-col justify-between gap-space-md">
+              
+              <!-- Studio Card -->
+              <div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm">
+                <div class="flex items-center gap-space-xs mb-space-md">
+                  <span class="material-symbols-outlined text-secondary text-[24px]">storefront</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary">Samiksha Experience Atelier</h3>
+                </div>
+                
+                <div class="flex flex-col gap-space-sm font-body-md text-body-md text-on-surface">
+                  
+                  <div class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">location_on</span>
+                    <div>
+                      <strong class="font-semibold text-primary block">Studio Address:</strong>
+                      <span>Dommasandra Eye Care Backside, Muthanallur Cross, Dommasandra, Karnataka 562125</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">mail</span>
+                    <div>
+                      <strong class="font-semibold text-primary block">Electronic Mail:</strong>
+                      <a class="hover:text-secondary transition-colors underline" href="mailto:Samikshadesigns@gmail.com">Samikshadesigns@gmail.com</a>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">schedule</span>
+                    <div>
+                      <strong class="font-semibold text-primary block">Studio Hours:</strong>
+                      <span>Monday – Saturday: 10:00 AM – 7:30 PM</span>
+                      <span class="block text-body-sm text-on-surface-variant">Sunday: By prior studio appointment</span>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-space-xs">
+                    <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">call</span>
+                    <div>
+                      <strong class="font-semibold text-primary block">Direct WhatsApp &amp; Inquiries:</strong>
+                      <a href="https://wa.me/919845012345" target="_blank" class="hover:text-secondary underline">+91 98450 12345</a>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="mt-space-md pt-space-xs flex items-center gap-space-xs">
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface">
+                    <span class="material-symbols-outlined text-[14px] mr-1 text-secondary">local_parking</span> Dedicated Client Parking Available
+                  </span>
+                </div>
+              </div>
+
+              <!-- Stylized Map Component -->
+              <div class="relative w-full h-64 rounded-xl overflow-hidden shadow-sm bg-surface-container group">
+                <div class="w-full h-full bg-cover bg-center">
+                  <img class="w-full h-full object-cover" alt="Map Location of Samiksha Interior Designs in Dommasandra Muthanallur Cross" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYG-wVORIwMJVnOD4-4itNHlv8i4RlphjzH3VchXHwyoVRYbZU1aLTtdC3i4XJeGCU5UdwR33wUASxEWv03c1QhxEwwMhxf1Rq369uskmG_R4BsC2xHP4Ev8C3EFHVNteUFQ8gGTirlnzv6Kcxprt54BSjP1xEe5p34DEFgT-irEBwd0-pZz1D8fQqHo3hgiRkCcccZwRYprr8EgAkHcwZDWjhlLSAw3Uvzmhyiw"/>
+                </div>
+
+                <!-- Floating Map Card Pin Overlay -->
+                <div class="absolute bottom-3 left-3 right-3 p-space-xs bg-surface/95 backdrop-blur-md rounded-lg flex items-center justify-between shadow-md">
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-[16px]">navigation</span>
+                    </div>
+                    <div class="overflow-hidden">
+                      <p class="font-label-sm text-label-sm font-bold text-primary truncate">Dommasandra Studio • Muthanallur Cross</p>
+                      <p class="font-body-sm text-[11px] text-on-surface-variant">Near Sarjapur Road tech corridor</p>
+                    </div>
+                  </div>
+                  <a class="px-space-xs py-1 rounded bg-primary text-on-primary font-label-sm text-[11px] uppercase tracking-wider shrink-0 hover:bg-secondary transition-colors" href="https://www.google.com/maps/search/?api=1&query=Dommasandra+Eye+Care+Backside,+Muthanallur+Cross,+Dommasandra,+Karnataka+562125" rel="noopener noreferrer" target="_blank">
+                    Directions
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low border-t border-surface-container">
+    <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter lg:gap-gutter">
+        
+        <!-- Atelier Info -->
+        <div class="lg:col-span-4 flex flex-col">
+          <div class="flex items-center gap-space-sm mb-space-sm">
+            <div class="w-8 h-8 rounded bg-primary-container text-on-primary flex items-center justify-center font-display text-lg font-bold">
+              S
+            </div>
+            <span class="font-headline-sm text-headline-sm text-primary">Samiksha Interior Designs</span>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-space-md">
+            Crafting bespoke sanctuaries and turnkey interior marvels across Bengaluru &amp; Karnataka.
+          </p>
+          <div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+            <div class="flex items-start gap-space-xs">
+              <span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">location_on</span>
+              <span>Dommasandra Eye Care Backside, Muthanallur Cross, Dommasandra, Karnataka 562125</span>
+            </div>
+            <div class="flex items-center gap-space-xs mt-space-xs">
+              <span class="material-symbols-outlined text-[18px] text-secondary shrink-0">mail</span>
+              <a class="hover:text-primary transition-colors" href="mailto:Samikshadesigns@gmail.com">Samikshadesigns@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Services Links -->
+        <div class="lg:col-span-3 flex flex-col">
+          <span class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-space-md font-semibold">Services</span>
+          <ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="#services">Modular Kitchens</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#services">Turnkey Interiors</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#services">Living &amp; Bedroom Styling</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#services">3D Architectural Visualisation</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="lg:col-span-2 flex flex-col">
+          <span class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-space-md font-semibold">Quick Links</span>
+          <ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="#portfolio-gallery">Portfolio</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#process">Design Process</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#testimonials">Client Testimonials</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#consultation-booking">Consultation Booking</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect & Hours -->
+        <div class="lg:col-span-3 flex flex-col">
+          <span class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-space-md font-semibold">Connect &amp; Hours</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">Mon - Sat: 10:00 AM – 7:30 PM</p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Sunday by prior studio appointment</p>
+          
+          <div class="flex items-center gap-space-sm mb-space-md">
+            <a aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-secondary hover:text-white transition-colors" href="https://wa.me/919845012345" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[18px]">chat</span>
+            </a>
+            <a aria-label="Email" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-secondary hover:text-white transition-colors" href="mailto:Samikshadesigns@gmail.com">
+              <span class="material-symbols-outlined text-[18px]">mail</span>
+            </a>
+            <a aria-label="Location" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-secondary hover:text-white transition-colors" href="https://www.google.com/maps/search/?api=1&query=Dommasandra+Eye+Care+Backside,+Muthanallur+Cross,+Dommasandra,+Karnataka+562125" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[18px]">location_on</span>
+            </a>
+          </div>
+
+          <div class="inline-flex items-center gap-space-xs text-secondary font-label-sm text-label-sm tracking-widest uppercase">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            <span>Accepting Bengaluru Projects</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-space-xl pt-space-md border-t border-surface-container flex flex-col md:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+        <p>© 2025 Samiksha Interior Designs. All rights reserved.</p>
+        <p class="text-right">Dommasandra, Muthanallur Cross, Karnataka 562125</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CLIENT-SIDE SCRIPTS -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function toggleMobileMenu() {
+      if (mobileMenu) {
+        mobileMenu.classList.toggle('hidden');
+      }
+    }
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    // 2. Interactive Portfolio Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Toggle Active styles on buttons
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-primary', 'text-on-primary');
+          btn.classList.add('bg-surface-container', 'text-on-surface');
+        });
+        button.classList.remove('bg-surface-container', 'text-on-surface');
+        button.classList.add('bg-primary', 'text-on-primary');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        portfolioItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filterValue === 'all' || category === filterValue) {
+            item.classList.remove('hidden-item');
+          } else {
+            item.classList.add('hidden-item');
+          }
+        });
+      });
+    });
+
+    // 3. Consultation Form Submission & WhatsApp Direct Sync
+    const leadForm = document.getElementById('leadForm');
+    const formSuccess = document.getElementById('formSuccess');
+    const whatsappInstantLink = document.getElementById('whatsappInstantLink');
+
+    if (leadForm) {
+      leadForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('clientName')?.value || '';
+        const phone = document.getElementById('clientPhone')?.value || '';
+        const email = document.getElementById('clientEmail')?.value || '';
+        const prop = document.getElementById('propertyType')?.value || '';
+        const budgetRadio = document.querySelector('input[name="budget"]:checked');
+        const budget = budgetRadio ? budgetRadio.value : 'Flexible';
+        const notes = document.getElementById('clientNotes')?.value || '';
+
+        // Prepare prefilled WhatsApp message
+        const message = `Hello Samiksha Interior Designs!%0A%0A*New Consultation Inquiry:*%0A• *Name:* ${encodeURIComponent(name)}%0A• *Phone:* ${encodeURIComponent(phone)}%0A• *Email:* ${encodeURIComponent(email)}%0A• *Property:* ${encodeURIComponent(prop)}%0A• *Budget:* ${encodeURIComponent(budget)}%0A• *Notes:* ${encodeURIComponent(notes)}`;
+
+        if (whatsappInstantLink) {
+          whatsappInstantLink.href = `https://wa.me/919845012345?text=${message}`;
+        }
+
+        if (formSuccess) {
+          formSuccess.classList.remove('hidden');
+        }
+
+        leadForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>
